@@ -63,6 +63,7 @@ class TweetsController < ApplicationController
     else
       @tweet = Tweet.find(params[:id])
       @tweet.delete
+      
       redirect "/users/#{current_user.slug}"
     end
   end
