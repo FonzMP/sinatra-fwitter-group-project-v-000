@@ -25,6 +25,9 @@ class UsersController < ApplicationController
 
   post '/login' do
     find_user(params)
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+    end
   end
 
   helpers do
@@ -41,9 +44,7 @@ class UsersController < ApplicationController
 
     def find_user(params)
       @user = User.find_by(username: params[:username])
-      if @user && @user.authenticate(params[:password])
-        session[:user_id] = @user.id
-      end
+
     end
 
   end
