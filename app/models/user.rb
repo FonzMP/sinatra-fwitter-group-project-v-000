@@ -14,6 +14,8 @@ class User < ActiveRecord::Base
     self.all.each do |user|
       if user.slug = slug_name
         return user
+      end
+      
     end
   end
 
