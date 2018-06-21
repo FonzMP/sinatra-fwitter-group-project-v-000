@@ -15,9 +15,11 @@ class ApplicationController < Sinatra::Base
 
   get '/tweets' do
     if current_user
-    @tweets = Tweet.all
+      @tweets = Tweet.all
 
-    erb :"tweets/tweets"
+      erb :"tweets/tweets"
+    else
+      redirect '/login'
   end
 
   helpers do
