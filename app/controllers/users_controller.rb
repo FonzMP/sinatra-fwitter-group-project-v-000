@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   post '/login' do
     find_current_user
-    if current_user == nil
+    if !@user
       redirect '/login'
     else
       session[:user_id] = @user.id
