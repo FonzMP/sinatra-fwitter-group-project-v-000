@@ -38,11 +38,12 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id/edit' do
+    @tweet = Tweet.find(params[:id])
     if !current_user
       redirect '/login'
     else
       binding.pry
-      @tweet = Tweet.find(params[:id])
+
 
       erb :"tweet/edit_tweet"
     end
