@@ -63,7 +63,6 @@ class TweetsController < ApplicationController
     else
       tweet = Tweet.find(params[:id])
       redirect "/users/#{current_user.slug}"
-      end
     end
   end
 
