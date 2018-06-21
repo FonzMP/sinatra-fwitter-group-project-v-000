@@ -28,6 +28,8 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
 
+      @tweets = Tweet.all
+
       erb :'tweets/tweets'
     end
   end
