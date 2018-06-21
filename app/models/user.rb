@@ -6,8 +6,8 @@ class User < ActiveRecord::Base
 
   validates :username, :email, :password, presence: true
 
-  def slug(user)
-    @slug = user.username.downcase.gsub(" ", "-")
+  def slug
+    @slug = self.username.downcase.gsub(" ", "-")
   end
 
 end
