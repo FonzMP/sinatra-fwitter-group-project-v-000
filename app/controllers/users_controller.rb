@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    create_user
+    create_user(params)
     @user.save
     if @user.save
       session[:user_id] = @user.id
