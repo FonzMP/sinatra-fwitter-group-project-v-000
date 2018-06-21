@@ -47,7 +47,7 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets/:id' do
-    
+    @tweet = Tweet.find(params[:id])
   end
 
 end
