@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     current_user(session)
+    binding.pry
     if @user
       redirect '/tweets'
     else
