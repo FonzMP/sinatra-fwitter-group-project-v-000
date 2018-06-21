@@ -61,7 +61,6 @@ class TweetsController < ApplicationController
     if !current_user
       redirect '/login'
     else
-      binding.pry
       tweet = Tweet.find(params[:id])
       if current_user.tweets.include?(@tweet)
         tweet.delete
