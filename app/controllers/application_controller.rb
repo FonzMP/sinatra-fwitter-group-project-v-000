@@ -7,6 +7,8 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
+  enable :sessions
+
   get '/' do
     erb :index
   end
