@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    @user = User.create(username: params[:username], email: params[:email], password: params[:password])
+
     @user.save
     if @user.save
       session[:user_id] = @user.id
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    
+
   end
 
   helpers do
@@ -33,6 +33,10 @@ class UsersController < ApplicationController
       if session.include?(:user_id)
         @user ||= User.find(session[:user_id])
       end
+    end
+
+    def create_user
+      @user = User.create(username: params[:username], email: params[:email], password: params[:password])
     end
 
   end
