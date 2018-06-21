@@ -22,5 +22,6 @@ class TweetsController < ApplicationController
 
     erb :"tweets/tweets"
   end
+  end
 
 end
