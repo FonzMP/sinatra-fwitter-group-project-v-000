@@ -60,6 +60,8 @@ class TweetsController < ApplicationController
   get '/tweets/:id/edit' do
     if !current_user
       redirect '/login'
+    else
+    end
   end
 
 end
