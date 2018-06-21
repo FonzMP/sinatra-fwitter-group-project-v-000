@@ -45,6 +45,11 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/user/:slug' do
+
+    erb :"users/show"
+  end
+
 
 
 
