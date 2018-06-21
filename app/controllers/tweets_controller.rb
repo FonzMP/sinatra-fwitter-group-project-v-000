@@ -67,6 +67,7 @@ class TweetsController < ApplicationController
         redirect "/users/#{current_user.slug}"
       else
         redirect "/tweets/#{tweet.id}"
+      end
     end
   end
 
