@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   def self.find_by_slug(slug_name)
     self.all.each do |user|
       @slug = user.slug
+      
       if user.slug = slug_name
         return user
       end
