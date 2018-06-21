@@ -28,8 +28,8 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       binding.pry
       session[:user_id] = @user.id
-      
-      redirect '/tweets'
+
+      erb :'tweets/tweets'
     end
   end
 
