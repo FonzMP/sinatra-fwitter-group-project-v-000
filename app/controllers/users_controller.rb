@@ -4,7 +4,9 @@ class UsersController < ApplicationController
 
     if current_user
       redirect '/login'
-    erb :"users/create_user"
+    else
+      erb :"users/create_user"
+    end
   end
 
   post '/signup' do
