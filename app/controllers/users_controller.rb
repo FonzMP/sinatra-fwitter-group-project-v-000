@@ -21,7 +21,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    @user = User.find_by(username: params[:username], password: params[:password])
+    @user = User.find_by(username: params[:username], email: params[:email], password: params[:password])
   end
 
 
