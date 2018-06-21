@@ -10,8 +10,10 @@ class TweetsController < ApplicationController
 
   post '/tweets' do
     @tweet = Tweet.create(content: params[:tweet][:content], user_id: current_user.id)
-
-    redirect '/tweets'
+    if @tweet.save
+      redirect '/tweets'
+    else
+      redirect '/tweets/new'
   end
 
   get '/tweets' do
