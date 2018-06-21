@@ -66,6 +66,10 @@ class TweetsController < ApplicationController
         @tweet.delete
 
         redirect "/users/#{current_user.slug}"
+      else
+        puts "That's not your tweet!"
+      end
+
     end
   end
 
