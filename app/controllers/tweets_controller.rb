@@ -18,10 +18,10 @@ class TweetsController < ApplicationController
     if !current_user
       redirect '/login'
     else
-    @tweets = Tweet.all
+      @tweets = Tweet.all
 
-    erb :"tweets/tweets"
-  end
+      erb :"tweets/tweets"
+    end
   end
 
 end
