@@ -29,7 +29,7 @@ class UsersController < ApplicationController
       redirect '/login'
     else
       session[:user_id] = @user.id
-      redirect '/tweets'
+      erb :"tweets/tweets"/tweets'
     end
   end
 
