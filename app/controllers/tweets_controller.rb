@@ -69,7 +69,6 @@ class TweetsController < ApplicationController
       else
         puts "That's not your tweet!"
       end
-
     end
   end
 
