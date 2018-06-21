@@ -14,6 +14,7 @@ class TweetsController < ApplicationController
       redirect '/tweets'
     else
       redirect '/tweets/new'
+    end
   end
 
   get '/tweets' do
