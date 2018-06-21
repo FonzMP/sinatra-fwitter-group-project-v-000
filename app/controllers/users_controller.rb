@@ -4,9 +4,8 @@ class UsersController < ApplicationController
     current_user(session)
     if !@user
       erb :"users/create_user"
-      redirect '/tweets'
     else
-
+      redirect '/tweets'
     end
   end
 
