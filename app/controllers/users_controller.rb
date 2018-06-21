@@ -47,7 +47,7 @@ class UsersController < ApplicationController
 
   get '/users/:slug' do
     @user = current_user
-    @tweets = current_user.tweets
+    @tweets = @user.tweets
 
     erb :"users/show"
   end
