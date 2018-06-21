@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-    binding.pry
     if !current_user
       erb :"users/create_user"
-
     else
       redirect '/login'
     end
