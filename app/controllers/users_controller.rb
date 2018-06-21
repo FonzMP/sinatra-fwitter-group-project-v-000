@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-
+    find_user(params)
   end
 
   helpers do
