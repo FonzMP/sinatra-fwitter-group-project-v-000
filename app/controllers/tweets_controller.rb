@@ -38,7 +38,7 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id/edit' do
-binding.pry
+    binding.pry
     if !current_user
       redirect '/login'
     else
