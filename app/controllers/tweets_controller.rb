@@ -38,8 +38,7 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets/:id/edit' do
-    @tweet = Tweet.find(params[:id])
-
+binding.pry
     if !current_user
       redirect '/login'
     else
