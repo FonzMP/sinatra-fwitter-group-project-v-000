@@ -46,6 +46,7 @@ class UsersController < ApplicationController
   end
 
   get '/users/:slug' do
+    binding.pry
     @user = current_user
 
     @tweets = @user.tweets
