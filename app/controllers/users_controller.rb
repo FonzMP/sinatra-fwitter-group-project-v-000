@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-    
     if current_user(session)
       erb :"users/create_user"
     else
