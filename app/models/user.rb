@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     @slug = self.username.downcase.gsub(" ", "-")
   end
 
-  def User.find_by_slug
+  def self.find_by_slug
 
   end
 
