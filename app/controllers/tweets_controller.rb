@@ -48,7 +48,7 @@ class TweetsController < ApplicationController
 
   post '/tweets/:id' do
     @tweet = Tweet.find(params[:id])
-    @tweet.update(content: params[:content])
+    @tweet.update(content: params[:tweet][:content])
   end
 
 end
