@@ -30,5 +30,10 @@ class UsersController < ApplicationController
     end
   end
 
+  helpers do
+
+  end
+  end
+
 
 end
