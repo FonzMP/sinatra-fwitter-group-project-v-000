@@ -38,7 +38,8 @@ class UsersController < ApplicationController
 
   get '/logout' do
     if current_user
-    session.clear
+      session.clear
+    end
   end
 
   helpers do
