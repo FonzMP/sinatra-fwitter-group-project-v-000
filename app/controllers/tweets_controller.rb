@@ -46,4 +46,6 @@ class TweetsController < ApplicationController
     end
   end
 
+  post '/tweets/:id'
+
 end
