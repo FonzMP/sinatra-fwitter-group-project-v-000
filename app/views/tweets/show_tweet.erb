@@ -4,6 +4,7 @@
 
 <% if current_user.tweets.include?(@tweet) %>
   <form action="/tweets/<%= @tweet.id %>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
     <input type="button" name="delete" value="Delete Tweet">
   </form>
 <% end %>
