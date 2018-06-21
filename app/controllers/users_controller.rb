@@ -24,6 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
+    @user = User.find_by
     if current_user == nil
       redirect '/login'
     else
@@ -38,6 +39,10 @@ class UsersController < ApplicationController
       if session.include?(:user_id)
         @user ||= User.find(session[:user_id])
       end
+    end
+
+    def find_current_user
+
     end
 
   end
