@@ -43,6 +43,7 @@ class UsersController < ApplicationController
     def find_user(params)
       @user = User.find_by(username: params[:username])
       if @user && @user.authenticate(params[:password])
+        session[:user_id]
     end
 
   end
