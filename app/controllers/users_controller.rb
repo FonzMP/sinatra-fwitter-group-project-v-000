@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     @user.save
     if @user.save
       session[:user_id] = @user.id
-      erb :'tweets/tweets'
+      redirect '/tweets'
     else
       redirect '/signup'
     end
