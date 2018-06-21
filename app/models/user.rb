@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   end
 
   def self.find_by_slug(slug_name)
-  
+    self.all.each do |user|
   end
 
 end
