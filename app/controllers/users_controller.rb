@@ -20,5 +20,9 @@ class UsersController < ApplicationController
     erb :"users/login"
   end
 
+  post '/login' do
+    
+  end
+
 
 end
