@@ -24,14 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    find_current_created_user(params)
-    binding.pry
-    if !@user
-      redirect '/login'
-    else
-      session[:user_id] = @user.id
-      erb :"tweets/tweets"
-    end
+    find_current_created_user
   end
 
   helpers do
