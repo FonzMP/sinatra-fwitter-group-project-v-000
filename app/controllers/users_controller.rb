@@ -24,9 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    binding.pry
-    find_current_created_user
-    binding.pry
+    
   end
 
   helpers do
@@ -35,10 +33,6 @@ class UsersController < ApplicationController
       if session.include?(:user_id)
         @user ||= User.find(session[:user_id])
       end
-    end
-
-    def find_current_created_user(params)
-      @user = User.find_by(username: params[:username], email: params[:email], password: params[:password])
     end
 
   end
