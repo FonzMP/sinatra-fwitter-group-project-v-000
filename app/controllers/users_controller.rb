@@ -5,7 +5,6 @@ class UsersController < ApplicationController
     if @user
       redirect '/tweets'
     else
-      binding.pry
       erb :"users/create_user"
     end
   end
