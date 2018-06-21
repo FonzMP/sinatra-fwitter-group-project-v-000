@@ -24,8 +24,6 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    @user = current_user
-    binding.pry
     if current_user == nil
       redirect '/login'
     else
