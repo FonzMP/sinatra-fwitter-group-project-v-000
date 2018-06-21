@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-    current_user
     binding.pry
     if !current_user
       erb :"users/create_user"
