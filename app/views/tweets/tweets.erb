@@ -1,4 +1,4 @@
-<% if session[:user_id] %>
+<% if session.include?(:user_id):user_id] %>
   <h1>Welcome, <%= @user.username %></h1>
 <% end %>
 
