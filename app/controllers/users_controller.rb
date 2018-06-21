@@ -9,7 +9,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    @user = User.create(username: params[:username], email: params[:email], password: params[:password])
+    find_current_user
     @user.save
     if @user.save
       session[:user_id] = @user.id
