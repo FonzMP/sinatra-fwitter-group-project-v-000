@@ -40,6 +40,8 @@ class UsersController < ApplicationController
     if current_user
       session.clear
       redirect '/login'
+    else
+      redirect '/'
     end
   end
 
