@@ -26,7 +26,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect 'users/show'
     else
-      redirect '/ligin'
+      redirect '/login'
+    end
   end
 
 
