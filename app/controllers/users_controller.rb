@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   end
 
   get '/users/:slug' do
-    current_user
+    @user = current_user
 
     erb :"users/show"
   end
