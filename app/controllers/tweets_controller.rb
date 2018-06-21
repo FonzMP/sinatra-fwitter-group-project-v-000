@@ -57,7 +57,7 @@ class TweetsController < ApplicationController
     end
   end
 
-  get '/tweets/:id/delete' do
+  post '/tweets/:id/delete' do
     if !current_user
       redirect '/login'
     else
