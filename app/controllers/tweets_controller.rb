@@ -15,6 +15,9 @@ class TweetsController < ApplicationController
   end
 
   get '/tweets' do
+    if !current_user
+      redirect '/login'
+      
     @tweets = Tweet.all
 
     erb :"tweets/tweets"
