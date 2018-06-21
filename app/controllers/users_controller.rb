@@ -48,8 +48,6 @@ class UsersController < ApplicationController
   get '/users/:slug' do
     @user = current_user
 
-    binding.pry
-    
     @tweets = @user.tweets
 
     erb :"users/show"
