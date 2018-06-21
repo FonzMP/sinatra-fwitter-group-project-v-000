@@ -20,7 +20,10 @@ class UsersController < ApplicationController
   end
 
   get '/login' do
-    erb :"users/login"
+    if !current_user
+      erb :"users/login"
+    else
+      redirect '/tweets'
   end
 
   post '/login' do
