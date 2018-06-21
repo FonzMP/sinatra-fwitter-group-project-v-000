@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
   helpers do
 
-    def current_user
+    def current_user(session)
       @user ||= User.find(session[:user_id])
     end
 
