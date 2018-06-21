@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     end
 
     def find_user(params)
-      @user = User.find_by(username: params[:username], email: params[:email], password: params[:password])
+      @user = User.find_by(username: params[:username], password: params[:password])
     end
 
   end
