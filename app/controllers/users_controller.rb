@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    @user = User.find_by
+    find_current_user
     if current_user == nil
       redirect '/login'
     else
