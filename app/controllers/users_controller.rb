@@ -26,6 +26,7 @@ class UsersController < ApplicationController
   post '/login' do
     find_user(params)
     if @user && @user.authenticate(params[:password])
+      binding.pry
       session[:user_id] = @user.id
       redirect '/tweets'
     end
