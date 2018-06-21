@@ -25,6 +25,7 @@ class UsersController < ApplicationController
 
   post '/login' do
     find_current_created_user
+    binding.pry
   end
 
   helpers do
