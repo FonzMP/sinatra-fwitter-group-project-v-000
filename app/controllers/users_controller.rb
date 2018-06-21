@@ -36,6 +36,7 @@ class UsersController < ApplicationController
   helpers do
 
     def current_user
+      if session.include?(:user_id)
       @user ||= User.find(session[:user_id])
     end
 
