@@ -61,8 +61,7 @@ class TweetsController < ApplicationController
     if !current_user
       redirect '/login'
     else
-      @tweet = Tweet.find(params[:id])
-      @tweet.delete
+      Tweet.delete(params[:id])
     end
   end
 
