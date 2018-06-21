@@ -36,6 +36,10 @@ class UsersController < ApplicationController
     end
   end
 
+  get '/logout' do
+    session.clear
+  end
+
   helpers do
 
     def current_user
