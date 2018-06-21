@@ -42,7 +42,7 @@ class UsersController < ApplicationController
       end
     end
 
-    def find_current_created_user
+    def find_current_created_user(params)
       @user = User.find_by(username: params[:username], email: params[:email], password: params[:password])
     end
 
