@@ -39,6 +39,10 @@ class UsersController < ApplicationController
       @user = User.create(username: params[:username], email: params[:email], password: params[:password])
     end
 
+    def find_user(params)
+      @user = User.find_by(username: params[:username], email: params[:email], password: params[:password])
+    end
+
   end
 
 
