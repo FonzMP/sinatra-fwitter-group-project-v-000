@@ -24,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
-    find_current_user
+    find_current_created_user
     if !@user
       redirect '/login'
     else
