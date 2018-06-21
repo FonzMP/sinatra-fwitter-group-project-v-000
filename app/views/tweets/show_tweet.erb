@@ -3,6 +3,7 @@
 <a href="/tweets/<%= @tweet.id %>/edit">Edit Tweet</a>
 
 <% if current_user.tweets.include?(@tweet) %>
-<form action="/tweets/<%= @tweet.id %>/delete" method="post">
-  <input type="button" name="delete" value="Delete Tweet">
-</form>
+  <form action="/tweets/<%= @tweet.id %>/delete" method="post">
+    <input type="button" name="delete" value="Delete Tweet">
+  </form>
+<% end %>
