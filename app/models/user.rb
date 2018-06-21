@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
     @slug = self.username.downcase.gsub(" ", "-")
   end
 
-  def self.find_by_slug(slug)
+  def self.find_by_slug(slug_name)
     self.all.each do |slug_user|
       if slug_user.slug == slug
         @user = slug_user
