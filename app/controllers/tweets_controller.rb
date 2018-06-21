@@ -42,9 +42,6 @@ class TweetsController < ApplicationController
     if !current_user
       redirect '/login'
     else
-      binding.pry
-
-
       erb :"tweet/edit_tweet"
     end
   end
