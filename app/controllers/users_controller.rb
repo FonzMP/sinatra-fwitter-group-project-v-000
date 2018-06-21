@@ -2,8 +2,7 @@ class UsersController < ApplicationController
 
   get '/signup' do
     current_user(session)
-    binding.pry
-    if @user
+    if !@user
       redirect '/tweets'
     else
       erb :"users/create_user"
