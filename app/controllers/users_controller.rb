@@ -27,7 +27,6 @@ class UsersController < ApplicationController
     find_user(params)
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      binding.pry
       erb :'tweets/tweets'
     end
   end
