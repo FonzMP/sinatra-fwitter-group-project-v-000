@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
       if user.slug = slug_name
         return user
       end
-      
     end
   end
 
