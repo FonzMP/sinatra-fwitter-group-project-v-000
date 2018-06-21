@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-    current_user
+    current_user(session)
     if @user
       redirect '/tweets'
     else
