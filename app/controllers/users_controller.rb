@@ -25,7 +25,6 @@ class UsersController < ApplicationController
 
   post '/login' do
     find_user(params)
-    binding.pry
   end
 
   helpers do
