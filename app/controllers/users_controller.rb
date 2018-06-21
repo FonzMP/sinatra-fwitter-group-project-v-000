@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
 
   get '/signup' do
-      erb :"users/create_user"
+    if current_user == nil
+        erb :"users/create_user"
+      else
+        redirect '/tweets'
   end
 
   post '/signup' do
