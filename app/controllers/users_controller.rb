@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username], email: params[:email], password: params[:password])
     if @user
       session[:user_id] = @user.id
-      redirect 'users/show'
+      redirect '/tweets'
     else
       redirect '/login'
     end
