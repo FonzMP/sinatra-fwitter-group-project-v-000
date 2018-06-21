@@ -62,6 +62,7 @@ class TweetsController < ApplicationController
       redirect '/login'
     else
       Tweet.delete(params[:id])
+      redirect '/users/:slug'
     end
   end
 
